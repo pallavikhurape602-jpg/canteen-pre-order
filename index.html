@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canteen Pre-Order</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🍴 Canteen Pre-Order</h1>
+    <p>Fresh Food • Quick Service • Happy You!</p>
+</header>
+
+<nav>
+    <button onclick="showPage('home')">🏠 Home</button>
+    <button onclick="showPage('menu')">🍽️ Menu</button>
+    <button onclick="showPage('cart')">🛒 Cart (<span id="cartCount">0</span>)</button>
+    <button onclick="showPage('checkout')">💳 Checkout</button>
+    <button onclick="showPage('orders')">📋 My Orders</button>
+</nav>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="page active">
+
+<div class="hero">
+
+<div class="hero-text">
+
+<span class="tag">WELCOME TO OUR CANTEEN</span>
+
+<h2>
+Order Food.<br>
+Skip The Queue. 🍴
+</h2>
+
+<p>
+Fresh food, quick ordering and less waiting.
+Choose your favourite meal, place your order online
+and enjoy a hassle-free canteen experience.
+</p>
+
+<div class="hero-features">
+<span>⚡ Quick Ordering</span>
+<span>🍴 Fresh Food</span>
+<span>⏱️ Less Waiting</span>
+</div>
+
+<button class="main-btn" onclick="showPage('menu')">
+🍽️ Explore Menu
+</button>
+
+</div>
+
+<div class="hero-food">
+🍕
+<span>🍔</span>
+<span>🥤</span>
+</div>
+
+</div>
+
+
+<div class="tree-section">
+
+<h2>🌳 Canteen Pre-Order System</h2>
+
+<div class="tree">
+
+<div class="tree-root">
+🍴 CANTEEN PRE-ORDER
+</div>
+
+<div class="tree-line"></div>
+
+<div class="tree-modules">
+
+<div class="tree-card">
+<div class="tree-icon">🏠</div>
+<h3>Home</h3>
+<p>Welcome to Canteen</p>
+</div>
+
+<div class="tree-card">
+<div class="tree-icon">🍽️</div>
+<h3>Menu</h3>
+<p>Select Food</p>
+<div class="mini-list">
+<span>🍕 Food</span>
+<span>💰 Price</span>
+<span>🛒 Add</span>
+</div>
+</div>
+
+<div class="tree-card">
+<div class="tree-icon">🛒</div>
+<h3>Cart</h3>
+<p>Manage Items</p>
+<div class="mini-list">
+<span>➕ Add</span>
+<span>❌ Remove</span>
+</div>
+</div>
+
+<div class="tree-card">
+<div class="tree-icon">💳</div>
+<h3>Checkout</h3>
+<p>Place Order</p>
+<div class="mini-list">
+<span>👤 Name</span>
+<span>📱 Mobile</span>
+<span>💰 Payment</span>
+</div>
+</div>
+
+<div class="tree-card">
+<div class="tree-icon">📋</div>
+<h3>My Orders</h3>
+<p>View Order Status</p>
+</div>
+
+</div>
+</div>
+</div>
+
+</section>
+
+
+<!-- ================= MENU ================= -->
+
+<section id="menu" class="page">
+
+<h2>🍽️ Our Canteen Menu</h2>
+
+<div class="menu-grid">
+
+
+<div class="food-card">
+<div class="food-img">🥪</div>
+<h3>Vada Pav</h3>
+<p>Mumbai special snack</p>
+<div class="price">₹30</div>
+<button onclick="addToCart('Vada Pav',30)">🛒 Add to Cart</button>
+</div>
+
+
+<div class="food-card">
+<div class="food-img">🥟</div>
+<h3>Samosa</h3>
+<p>Crispy potato samosa</p>
+<div class="price">₹25</div>
+<button onclick="addToCart('Samosa',25)">🛒 Add to Cart</button>
+</div>
+
+
+<div class="food-card">
+<div class="food-img">🥞</div>
+<h3>Dosa</h3>
+<p>Crispy South Indian dosa</p>
+<div class="price">₹70</div>
+<button onclick="addToCart('Dosa',70)">🛒 Add to Cart</button>
+</div>
+
+
+<div class="food-card">
+<div class="food-img">🥭</div>
+<h3>Mango Juice</h3>
+<p>Fresh chilled mango juice</p>
+<div class="price">₹50</div>
+<button onclick="addToCart('Mango Juice',50)">🛒 Add to Cart</button>
+</div>
+
+
+<div class="food-card">
+<div class="food-img">🥗</div>
+<h3>Bhel</h3>
+<p>Spicy crunchy bhel</p>
+<div class="price">₹40</div>
+<button onclick="addToCart('Bhel',40)">🛒 Add to Cart</button>
+</div>
+
+
+<div class="food-card">
+<div class="food-img">🥣</div>
+<h3>Misal Pav</h3>
+<p>Spicy Maharashtrian misal</p>
+<div class="price">₹60</div>
+<button onclick="addToCart('Misal Pav',60)">🛒 Add to Cart</button>
+</div>
+
+
+<div class="food-card">
+<div class="food-img">☕</div>
+<h3>Tea</h3>
+<p>Hot fresh cutting chai</p>
+<div class="price">₹20</div>
+<button onclick="addToCart('Tea',20)">🛒 Add to Cart</button>
+</div>
+
+
+<div class="food-card">
+<div class="food-img">🍕</div>
+<h3>Pizza</h3>
+<p>Cheesy vegetable pizza</p>
+<div class="price">₹120</div>
+<button onclick="addToCart('Pizza',120)">🛒 Add to Cart</button>
+</div>
+
+
+<div class="food-card">
+<div class="food-img">🍔</div>
+<h3>Veg Burger</h3>
+<p>Fresh crispy burger</p>
+<div class="price">₹80</div>
+<button onclick="addToCart('Veg Burger',80)">🛒 Add to Cart</button>
+</div>
+
+
+<div class="food-card">
+<div class="food-img">🍜</div>
+<h3>Veg Noodles</h3>
+<p>Hot spicy noodles</p>
+<div class="price">₹90</div>
+<button onclick="addToCart('Veg Noodles',90)">🛒 Add to Cart</button>
+</div>
+
+
+<div class="food-card">
+<div class="food-img">🍛</div>
+<h3>Veg Biryani</h3>
+<p>Aromatic vegetable biryani</p>
+<div class="price">₹130</div>
+<button onclick="addToCart('Veg Biryani',130)">🛒 Add to Cart</button>
+</div>
+
+
+<div class="food-card">
+<div class="food-img">🥪</div>
+<h3>Sandwich</h3>
+<p>Fresh vegetable sandwich</p>
+<div class="price">₹60</div>
+<button onclick="addToCart('Sandwich',60)">🛒 Add to Cart</button>
+</div>
+
+
+<div class="food-card">
+<div class="food-img">🍟</div>
+<h3>French Fries</h3>
+<p>Crispy golden fries</p>
+<div class="price">₹70</div>
+<button onclick="addToCart('French Fries',70)">🛒 Add to Cart</button>
+</div>
+
+
+<div class="food-card">
+<div class="food-img">🥤</div>
+<h3>Cold Coffee</h3>
+<p>Chilled creamy coffee</p>
+<div class="price">₹60</div>
+<button onclick="addToCart('Cold Coffee',60)">🛒 Add to Cart</button>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= CART ================= -->
+
+<section id="cart" class="page">
+
+<h2>🛒 Your Cart</h2>
+
+<div class="cart-box">
+
+<div id="cartItems"></div>
+
+<div id="cartTotal" class="total">
+Total: ₹0
+</div>
+
+<br>
+
+<button class="main-btn" onclick="showPage('menu')">
+➕ Add More Food
+</button>
+
+<button class="main-btn" onclick="goCheckout()">
+💳 Proceed to Checkout
+</button>
+
+</div>
+
+</section>
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<section id="checkout" class="page">
+
+<h2>💳 Complete Your Order</h2>
+
+<div class="checkout-box">
+
+<label>👤 Your Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+>
+
+
+<label>📱 Mobile Number</label>
+
+<input
+type="text"
+id="mobile"
+placeholder="Enter mobile number"
+>
+
+
+<label>💰 Payment Method</label>
+
+<select id="payment" onchange="paymentChange()">
+
+<option value="Cash on Pickup">
+💵 Cash on Pickup
+</option>
+
+<option value="UPI">
+📲 UPI / QR Payment
+</option>
+
+<option value="Card">
+💳 Card
+</option>
+
+</select>
+
+
+<!-- QR PAYMENT -->
+
+<div id="qrPayment" class="qr-payment">
+
+<h3>📲 Scan & Pay</h3>
+
+<p>Scan the QR Code using your UPI app</p>
+
+<div class="upi-qr">
+
+<div class="qr-box">
+
+<div class="qr-pattern">
+▣ ▣ ▣ ▣<br>
+▣ ▢ ▣ ▢<br>
+▣ ▣ ▢ ▣<br>
+▢ ▣ ▣ ▢<br>
+▣ ▢ ▣ ▣
+</div>
+
+</div>
+
+</div>
+
+<p class="upi-name">
+💰 Canteen Payment
+</p>
+
+<button
+type="button"
+class="paid-btn"
+onclick="markPaid()">
+
+✅ Payment Done
+
+</button>
+
+<p id="paymentStatus" class="payment-status">
+🔴 Payment Pending
+</p>
+
+</div>
+
+
+<h3>🧾 Order Summary</h3>
+
+<div id="checkoutItems"></div>
+
+<div id="checkoutTotal" class="total">
+Total: ₹0
+</div>
+
+
+<button
+class="main-btn"
+onclick="placeOrder()">
+
+✅ Confirm Order
+
+</button>
+
+<div id="successMessage"></div>
+
+</div>
+
+</section>
+
+
+<!-- ================= MY ORDERS ================= -->
+
+<section id="orders" class="page">
+
+<h2>📋 My Orders</h2>
+
+<div class="orders-box">
+
+<div id="ordersList">
+Loading...
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+let cart = [];
+
+let paymentDone = false;
+
+
+/* ================= PAGE ================= */
+
+function showPage(pageId) {
+
+document.querySelectorAll(".page").forEach(page => {
+
+page.classList.remove("active");
+
+});
+
+document.getElementById(pageId).classList.add("active");
+
+
+if(pageId === "cart") {
+
+displayCart();
+
+}
+
+
+if(pageId === "checkout") {
+
+displayCheckout();
+
+}
+
+
+if(pageId === "orders") {
+
+loadOrders();
+
+}
+
+}
+
+
+/* ================= CART ================= */
+
+function addToCart(food,price) {
+
+cart.push({
+
+food:food,
+price:price
+
+});
+
+updateCartCount();
+
+alert(food + " added to cart! 🎉");
+
+showPage("cart");
+
+}
+
+
+function updateCartCount() {
+
+document.getElementById("cartCount").textContent =
+cart.length;
+
+}
+
+
+function displayCart() {
+
+const container =
+document.getElementById("cartItems");
+
+
+if(cart.length === 0) {
+
+container.innerHTML = `
+
+<div class="empty">
+
+🛒 Your cart is empty.
+
+<br><br>
+
+Add some delicious food!
+
+</div>
+
+`;
+
+document.getElementById("cartTotal").textContent =
+"Total: ₹0";
+
+return;
+
+}
+
+
+let html = "";
+
+let total = 0;
+
+
+cart.forEach((item,index) => {
+
+total += Number(item.price);
+
+
+html += `
+
+<div class="cart-item">
+
+<div>
+
+<b>${item.food}</b>
+
+<br>
+
+₹${item.price}
+
+</div>
+
+
+<button
+class="remove-btn"
+onclick="removeFromCart(${index})">
+
+❌ Remove
+
+</button>
+
+</div>
+
+`;
+
+});
+
+
+container.innerHTML = html;
+
+
+document.getElementById("cartTotal").textContent =
+"Total: ₹" + total;
+
+}
+
+
+function removeFromCart(index) {
+
+cart.splice(index,1);
+
+updateCartCount();
+
+displayCart();
+
+}
+
+
+function goCheckout() {
+
+if(cart.length === 0) {
+
+alert("Please add food to cart first.");
+
+return;
+
+}
+
+showPage("checkout");
+
+}
+
+
+/* ================= CHECKOUT ================= */
+
+function displayCheckout() {
+
+const container =
+document.getElementById("checkoutItems");
+
+
+let html = "";
+
+let total = 0;
+
+
+cart.forEach(item => {
+
+total += Number(item.price);
+
+html += `
+
+<p>
+🍽️ ${item.food} - ₹${item.price}
+</p>
+
+`;
+
+});
+
+
+container.innerHTML = html;
+
+
+document.getElementById("checkoutTotal").textContent =
+"Total: ₹" + total;
+
+}
+
+
+/* ================= PAYMENT ================= */
+
+function paymentChange() {
+
+const payment =
+document.getElementById("payment").value;
+
+const qr =
+document.getElementById("qrPayment");
+
+
+if(payment === "UPI") {
+
+qr.style.display = "block";
+
+} else {
+
+qr.style.display = "none";
+
+paymentDone = false;
+
+document.getElementById("paymentStatus").innerHTML =
+"🔴 Payment Pending";
+
+}
+
+}
+
+
+function markPaid() {
+
+paymentDone = true;
+
+document.getElementById("paymentStatus").innerHTML =
+"🟢 Payment Status: <b>PAID ✅</b>";
+
+}
+
+
+/* ================= PLACE ORDER ================= */
+
+function placeOrder() {
+
+const name =
+document.getElementById("name").value.trim();
+
+
+const mobile =
+document.getElementById("mobile").value.trim();
+
+
+const payment =
+document.getElementById("payment").value;
+
+
+if(!name) {
+
+alert("Please enter your name.");
+
+return;
+
+}
+
+
+if(!mobile) {
+
+alert("Please enter your mobile number.");
+
+return;
+
+}
+
+
+if(cart.length === 0) {
+
+alert("Please add food to cart.");
+
+return;
+
+}
+
+
+/* UPI PAYMENT CHECK */
+
+if(payment === "UPI" && !paymentDone) {
+
+alert("Please complete UPI payment first.");
+
+return;
+
+}
+
+
+const total =
+cart.reduce(
+(sum,item) =>
+sum + Number(item.price),0
+);
+
+
+const foodList =
+cart.map(item => item.food).join(", ");
+
+
+let paymentStatus =
+payment === "UPI"
+? "Paid"
+: "Pending";
+
+
+fetch("/order",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+name:name,
+
+mobile:mobile,
+
+payment:payment + " - " + paymentStatus,
+
+food:foodList,
+
+items:cart,
+
+total:total
+
+})
+
+})
+
+.then(response => response.json())
+
+.then(data => {
+
+if(data.message === "Order placed successfully!") {
+
+
+document.getElementById(
+"successMessage"
+).innerHTML = `
+
+<div class="success">
+
+<h3>
+🎉 Order Placed Successfully!
+</h3>
+
+<p>
+Your Order ID:
+<b>#${data.orderId}</b>
+</p>
+
+<p>
+💰 Payment:
+<b>${paymentStatus}</b>
+</p>
+
+<p>
+🟡 Order Status:
+<b>Pending</b>
+</p>
+
+</div>
+
+`;
+
+
+cart = [];
+
+paymentDone = false;
+
+updateCartCount();
+
+displayCheckout();
+
+
+} else {
+
+alert(
+data.message ||
+"Order failed."
+);
+
+}
+
+})
+
+.catch(error => {
+
+console.log(error);
+
+alert(
+"Server connection problem."
+);
+
+});
+
+}
+
+
+/* ================= LOAD ORDERS ================= */
+
+function loadOrders() {
+
+fetch("/orders")
+
+.then(response => response.json())
+
+.then(orders => {
+
+const container =
+document.getElementById("ordersList");
+
+
+if(!orders || orders.length === 0) {
+
+container.innerHTML = `
+
+<div class="empty">
+
+📋 No orders yet.
+
+<br><br>
+
+Place your first order!
+
+</div>
+
+`;
+
+return;
+
+}
+
+
+let html = "";
+
+
+orders.forEach(order => {
+
+html += `
+
+<div class="order-card">
+
+<h3>
+🧾 Order #${order.id}
+</h3>
+
+<p>
+<b>Name:</b>
+${order.name}
+</p>
+
+<p>
+<b>Mobile:</b>
+${order.mobile || "-"}
+</p>
+
+<p>
+<b>Food:</b>
+${order.food}
+</p>
+
+<p>
+<b>Total:</b>
+₹${order.total}
+</p>
+
+<p>
+<b>Payment:</b>
+${order.payment || "-"}
+</p>
+
+<p>
+
+<b>Status:</b>
+
+<span class="status">
+${order.status}
+</span>
+
+</p>
+
+
+<div class="status-buttons">
+
+<button
+onclick="updateStatus(${order.id},'Pending')">
+
+🟡 Pending
+
+</button>
+
+
+<button
+onclick="updateStatus(${order.id},'Preparing')">
+
+🟠 Preparing
+
+</button>
+
+
+<button
+onclick="updateStatus(${order.id},'Ready')">
+
+🟢 Ready
+
+</button>
+
+
+<button
+onclick="updateStatus(${order.id},'Cancelled')">
+
+🔴 Cancelled
+
+</button>
+
+</div>
+
+
+<p>
+
+<b>Date:</b>
+${order.created_at}
+
+</p>
+
+</div>
+
+`;
+
+});
+
+
+container.innerHTML = html;
+
+})
+
+.catch(error => {
+
+console.log(error);
+
+document.getElementById(
+"ordersList"
+).innerHTML =
+"Unable to load orders.";
+
+});
+
+}
+
+
+/* ================= UPDATE STATUS ================= */
+
+function updateStatus(id,status) {
+
+fetch("/order/" + id,{
+
+method:"PUT",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+status:status
+
+})
+
+})
+
+.then(response => response.json())
+
+.then(data => {
+
+alert(
+"Order status updated to " +
+status
+);
+
+loadOrders();
+
+})
+
+.catch(error => {
+
+console.log(error);
+
+alert(
+"Unable to update order status."
+);
+
+});
+
+}
+
+
+/* ================= START ================= */
+
+updateCartCount();
+
+paymentChange();
+
+</script>
+
+</body>
+</html>
